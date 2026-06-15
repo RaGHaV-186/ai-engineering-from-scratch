@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+
+# Datasets
+data/*.parquet
+data/*.csv
+data/*.json
+
+# Model weights
+*.bin
+*.safetensors
+*.pt
+*.onnx
+
+# Python cache
+__pycache__/
+*.pyc
