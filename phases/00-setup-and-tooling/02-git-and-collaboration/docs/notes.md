@@ -21,3 +21,4 @@
 | `git merge <name>` | Merge branch into current |
 
 ## Completed: 2026-06-15
+- Practiced the branch workflow on 2026-06-15
