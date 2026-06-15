@@ -46,3 +46,14 @@ Below that, dispatch overhead dominates.
 When local MPS isn't enough:
 - Free:  Google Colab (T4), Kaggle Notebooks (P100, 30hr/week)
 - Paid:  Lambda Labs (~$0.75/hr A10), Vast.ai, RunPod
+
+### Memory limits (16GB M4 MacBook Air)
+| Model | Params | fp32 | fp16 | Fits? |
+|-------|--------|------|------|-------|
+| GPT-2 small | 124M | 0.5GB | 0.25GB | ✅ easy |
+| GPT-2 XL | 1.5B | 6GB | 3GB | ✅ fits |
+| LLaMA 7B | 7B | 28GB | 14GB | ⚠️ fp16 only |
+| LLaMA 13B | 13B | 52GB | 26GB | ❌ cloud |
+
+Rule of thumb: params × 4 bytes (fp32) or × 2 bytes (fp16)
+GPU usable memory: ~75% of system RAM = ~12.9GB
